@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <button>click to fetch </button>
+
+    <div class="data"> </div>
+
+    <script>
+        var user = [{
+                name: "john",
+                dob: '28 / 01 / 1988',
+                hometown: "delhi"
+            },
+
+            {
+                name: "mike",
+                dob: '28 / 01 / 1990',
+                hometown: "mumbai"
+            },
+
+            {
+                name: "grorge",
+                dob: '28 / 01 / 1992',
+                hometown: "chennai"
+            },
+
+            {
+                name: "bob",
+                dob: '28 / 01 / 1979',
+                hometown: "bangalore"
+            },
+
+            {
+                name: "samual",
+                dob: '28 / 01 / 1993',
+                hometown: "pune"
+            },
+        ]
+
+        document.querySelector('button').addEventListener('click', function() {
+            for (var i in user) {
+                var tr = document.createElement("tr");
+
+                for (var j in user[i]) {
+
+                    tr.innerHTML += "<td>" + user[i][j] + "</td>";
+
+
+                }
+
+                document.querySelector(".data").appendChild(tr)
+            }
+
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body></html>
